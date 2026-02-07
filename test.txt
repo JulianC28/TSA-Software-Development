@@ -1,0 +1,14 @@
+var lang;
+onEvent("lang1", "click", function( ) {
+  lang = "English";
+});
+onEvent("lang2", "click", function( ) {
+  lang = "Español (España)";
+});
+// Button clicked
+onEvent("read", "click", function( ) {
+  //retrieves user input from input box
+  var textInput = getProperty("input", "text");
+  //plays the user input out loud
+  playSpeech(textInput, "female", lang);
+});
